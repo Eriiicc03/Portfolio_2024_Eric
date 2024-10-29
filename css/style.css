@@ -1,0 +1,225 @@
+/* styles.css */
+
+/* Reseteo de márgenes y bordes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+}
+
+/* Portada */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.hero-content button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #45a049;
+}
+
+/* Íconos de tecnología como fondo */
+.background-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.tech-icon {
+  position: absolute;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Posiciones y tamaños específicos de los íconos */
+.icon1 {
+  width: 100px;
+  top: 20%;
+  left: 30%;
+}
+
+.icon2 {
+  width: 150px;
+  top: 50%;
+  left: 70%;
+}
+
+.icon3 {
+  width: 120px;
+  top: 80%;
+  left: 10%;
+}
+
+/* Animación de flotación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Sección del portafolio */
+.portfolio-content {
+  padding: 4rem 2rem;
+  background-color: #121212;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.portfolio-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 1.6em;
+    border: #FF6600 solid 0.15em;
+    border-radius: 0.25em;
+    color: #FF6600;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .button p {
+    z-index: 1;
+  }
+  
+  .button:hover {
+    color: #212121;
+  }
+  
+  .button:active {
+    border-color: #FF6600;
+  }
+  
+  .button::after, .button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: #FF6600;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .button::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .button::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .button:hover:before {
+    transform: translateX(-1em);
+  }
+  
+  .button:hover:after {
+    transform: translateX(1em);
+  }
+  
+  .button:active:before,
+  .button:active:after {
+    background: teal;
+  }
+.ini {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+}
+    
+.sobremi {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+}
+        
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-row: span 5 / span 5;
+}
+
+.div2 {
+    grid-row: span 5 / span 5;
+}
+
+.div3 {
+    grid-row: span 5 / span 5;
+    grid-row-start: 6;
+}
+
+.div4 {
+    grid-row: span 5 / span 5;
+    grid-row-start: 6;
+}
+        
