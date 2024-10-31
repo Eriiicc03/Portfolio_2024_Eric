@@ -28,6 +28,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color:#FF6600;
 }
 
 .hero-content p {
@@ -222,4 +223,29 @@ body {
     grid-row: span 5 / span 5;
     grid-row-start: 6;
 }
-        
+
+/*Skills*/
+
+.parentskills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+}
+  
+.div1skills {
+  grid-row: span 2 / span 2;
+}
+
+.div2skills {
+  grid-row: span 2 / span 2;
+}
+
+.div3skills {
+  grid-row: span 2 / span 2;
+}
+
+.div4skills {
+  grid-row: span 2 / span 2;
+}
+      
