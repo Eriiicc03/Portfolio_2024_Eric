@@ -20,22 +20,27 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
+  flex-direction: column; /* Ajuste para centrar contenido en columna */
+  gap: 2rem;
 }
-
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Para apilar elementos verticalmente */
+  align-items: center;
+}
 .hero-content h1 {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color:#FF6600;
+  color: #FF6600;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   color: #cccccc;
 }
-
 .hero-content button {
   margin-top: 1.5rem;
   padding: 0.8rem 1.5rem;
@@ -51,6 +56,7 @@ body {
 .hero-content button:hover {
   background-color: #45a049;
 }
+
 
 /* Íconos de tecnología como fondo */
 .background-icons {
@@ -68,6 +74,75 @@ body {
   opacity: 0.15;
   animation: float 6s ease-in-out infinite;
 }
+/* Centrado de iconos de redes sociales */
+.card {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #5865F2;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 /* Posiciones y tamaños específicos de los íconos */
 .icon1 {
@@ -182,7 +257,7 @@ body {
   
   .button:active:before,
   .button:active:after {
-    background: teal;
+    background: white;
   }
 .ini {
     display: grid;
@@ -193,59 +268,96 @@ body {
     
 .sobremi {
     grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
+    grid-row: span 2 / span 2;
 }
-        
+/*proyectos */
 
+/* Centrado del contenedor de proyectos personales */
+#exp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
 
-
+/* Grid para proyectos, centrado y con ancho limitado */
 .parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 8px;
-}
-    
-.div1 {
-    grid-row: span 5 / span 5;
-}
-
-.div2 {
-    grid-row: span 5 / span 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 800px; /* Limita el ancho máximo del grid */
+  width: 100%;
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 2rem 0; /* Añade espacio alrededor */
+  justify-content: center; /* Asegura que el grid se mantenga centrado */
 }
 
-.div3 {
-    grid-row: span 5 / span 5;
-    grid-row-start: 6;
+/* Tarjetas individuales de proyectos */
+.div1, .div2, .div3, .div4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #e0e0e0;
 }
 
-.div4 {
-    grid-row: span 5 / span 5;
-    grid-row-start: 6;
-}
+
 
 /*Skills*/
+.skills{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #FF6600;
+  padding-bottom: 50px;
+}
 
 .parentskills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 8px;
+  place-items: center; /* Centra horizontal y verticalmente */
+}
+.parentskills h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #FF6600;
 }
   
+.div1 {
+  grid-column: span 4 / span 4;
+}
+
 .div1skills {
-  grid-row: span 2 / span 2;
+  grid-row-start: 2;
 }
 
 .div2skills {
-  grid-row: span 2 / span 2;
+  grid-row-start: 2;
 }
 
 .div3skills {
-  grid-row: span 2 / span 2;
+  grid-row-start: 2;
 }
 
 .div4skills {
-  grid-row: span 2 / span 2;
+  grid-row-start: 2;
 }
-      
+
+/*Contacto*/
+.contacto h2{
+  color: #FF6600;
+}
+
+#contactar{
+  padding-top: 23px;
+
+}
