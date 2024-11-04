@@ -100,7 +100,7 @@ body {
   background-color: #d62976;
   transition-duration: 0.3s;
 }
-/* twitter*/
+/* discord*/
 .containerTwo:hover {
   background-color: #5865F2;
   transition-duration: 0.3s;
@@ -217,7 +217,10 @@ body {
     transition: border 300ms, color 300ms;
     user-select: none;
   }
-  
+  a{
+    text-decoration: none;
+  }
+
   .button p {
     z-index: 1;
   }
