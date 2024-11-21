@@ -295,13 +295,13 @@ body {
 /* Grid para proyectos, centrado y con ancho limitado */
 .parent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+  gap: 16px; /* Espacio entre las tarjetas */
   max-width: 800px; /* Limita el ancho máximo del grid */
   width: 100%;
   margin: 0 auto; /* Centra horizontalmente */
   padding: 2rem 0; /* Añade espacio alrededor */
-  justify-content: center; /* Asegura que el grid se mantenga centrado */
+  justify-items: center; /* Asegura que las tarjetas estén centradas en cada columna */
 }
 
 /* Tarjetas individuales de proyectos */
@@ -317,6 +317,9 @@ body {
   color: #e0e0e0;
 }
 
+.div1 {
+  /* Ya no se necesita el span 4, porque ahora se ajusta a una columna estándar */
+}
 
 
 /*Skills*/
@@ -342,9 +345,7 @@ body {
   color: #FF6600;
 }
   
-.div1 {
-  grid-column: span 4 / span 4;
-}
+
 
 .div1skills {
   grid-row-start: 2;
