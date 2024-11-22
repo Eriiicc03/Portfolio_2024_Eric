@@ -317,11 +317,6 @@ body {
   color: #e0e0e0;
 }
 
-.div1 {
-  /* Ya no se necesita el span 4, porque ahora se ajusta a una columna estándar */
-}
-
-
 /*Skills*/
 .skills{
   font-size: 4rem;
