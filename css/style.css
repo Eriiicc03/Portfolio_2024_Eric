@@ -41,8 +41,24 @@ body {
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: #cccccc; 
 }
+#typed-text {
+  border-right: 4px solid #fff; /* Efecto de cursor */
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: white; }
+  100% { border-color: transparent; }
+}
+
+#typed-text {
+  animation: blink 0.7s infinite;
+}
+
 .hero-content button {
   margin-top: 1.5rem;
   padding: 0.8rem 1.5rem;
